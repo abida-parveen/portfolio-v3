@@ -1,0 +1,119 @@
+.work_experience_container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+.work_experience_left_col {
+  width: calc(30%);
+}
+.work_experience_title {
+  align-items: center;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin: 15px 0px;
+  padding: 15px 30px;
+  width: 280px;
+}
+
+.work_experience_active {
+  background-color: var(--box-background);
+}
+.work_experience_title:hover {
+  background-color: var(--box-background);
+}
+.work_experience_right_col {
+  width: calc(60%);
+}
+.work_experience_title_heading {
+  margin: 0px;
+  color: var(--box-text);
+}
+.work_experience_right_col :is(h3, p) {
+  padding: 0;
+  margin: 0;
+  line-height: 25px;
+}
+.work_experience_right_col h3 span {
+  border-bottom: 1px solid var(--text-secondary);
+}
+.work_experience_content {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-top: 5px;
+}
+.clip_container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.work_experience_spliter {
+  border: 1px solid var(--text-secondary);
+  margin: 30px 0;
+}
+
+.list {
+  list-style-type: none;
+}
+
+.list > li {
+  /* text-indent: -10px; */
+  position: relative;
+  font-family: "Plus Jakarta Sans";
+}
+.list > li:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: var(--text-secondary);
+  left: -25px;
+  top: 9px;
+}
+.whatIdidTitle {
+  font-weight: bolder;
+}
+@media screen and (max-width: 1023px) {
+  .work_experience_container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .work_experience_left_col {
+    width: calc(100%);
+  }
+  .work_experience_title {
+    background-color: var(--bg-alternative);
+    padding: 15px 20px;
+    width: calc(33%);
+  }
+  .work_experience_right_col {
+    width: calc(100%);
+  }
+  .work_experience_title_container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .work_experience_icon {
+    height: 20px;
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .work_experience_title{
+    margin-right: 10px;
+  }  
+}
+
+@media screen and (max-width: 767px) {
+  .work_experience_title_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .work_experience_title {
+    width: calc(100%);
+  }
+}

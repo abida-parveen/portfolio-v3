@@ -1,0 +1,70 @@
+.portfolio_popup_swiper_container {
+  margin-bottom: 70px;
+}
+.portfolio_popup_swiper {
+  overflow: visible !important;
+}
+.portfolio_popup_swiper_img_container {
+  border-radius: 15px;
+  overflow: hidden;
+}
+.portfolio_popup_swiper_img_container span {
+  width: 100%;
+}
+
+.swiper_button_container {
+  display: flex;
+  align-self: flex-end;
+}
+.swiper_button {
+  align-items: center;
+  background-color: var(--bg-icon-container);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+}
+
+.swiper_end {
+  opacity: 0.5;
+}
+.swiper_button:first-child {
+  margin-right: 16px;
+}
+.portfolio_popup_swiper_img {
+  object-fit: cover;
+  height: auto;
+  min-height: 355px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px !important;
+  width: calc(100% - 2px);
+}
+
+/* 
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto !important;
+  bottom: -30px;
+  background-image: url("../../../../assets/icons/arrow.svg") !important;
+  background-repeat: no-repeat !important;
+  width: 72px !important;
+  height: 10px !important;
+  z-index: 1111 !important;
+  opacity: 0.6 !important;
+}
+.swiper-button-prev {
+  left: 5px !important;
+  transform: rotate(180deg);
+}
+.swiper-button-next {
+  right: 5px !important;
+} */
+
+@media screen and (max-width: 1023px) {
+  .portfolio_popup_swiper_img {
+    min-height: 35vw;
+  }
+}
+@media screen and (max-width: 767px) {
+}
