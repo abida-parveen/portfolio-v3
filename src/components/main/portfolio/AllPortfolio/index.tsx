@@ -5,18 +5,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router";
-import type { PortfolioProjectType } from "../../../../types/portfolio.type";
+import type PortfolioDataType from "../../../../models/state-types/PortfolioDataType";
 
 interface AllPorfolioPropType {
   handlePortfolioPopup: () => void;
-  handlePortfolioPopupData: (item: PortfolioProjectType) => void;
-  portfolio?: PortfolioProjectType[];
+  handlePortfolioPopupData: (item: PortfolioDataType) => void;
+  portfolio?: PortfolioDataType[];
 }
 
 const AllPortfolio: React.FC<AllPorfolioPropType> = (props) => {
   const { handlePortfolioPopup, handlePortfolioPopupData, portfolio } = props;
 
-  const handlePopup = (item: PortfolioProjectType) => {
+  const handlePopup = (item: PortfolioDataType) => {
     handlePortfolioPopupData(item);
     handlePortfolioPopup();
   };
@@ -32,7 +32,7 @@ const AllPortfolio: React.FC<AllPorfolioPropType> = (props) => {
         </div>
         <div>
           <div className={`${styles.seeAllPortfolio_container}`}>
-            {portfolio?.map((item: PortfolioProjectType) => (
+            {portfolio?.map((item: PortfolioDataType) => (
               <div
                 key={item?.id}
                 className={`hover_color ${styles.portfolio_cards}`}

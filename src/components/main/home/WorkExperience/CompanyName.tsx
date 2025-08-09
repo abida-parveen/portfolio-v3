@@ -11,7 +11,7 @@ import _ from "lodash";
 import { connect } from "react-redux";
 import type { RootState } from "../../../../state-management/store";
 import { themeMode, type ThemeModeType } from "../../../../models/state-types/ThemeModeType";
-import type { WorkExperienceDataType } from "../../../../types/workExperience.type";
+import type WorkExperienceDataType from "../../../../models/state-types/WorkExperienceDataType";
 
 interface CompanyNamePropType {
   item: WorkExperienceDataType;

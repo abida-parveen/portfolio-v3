@@ -1,7 +1,5 @@
 import type React from "react";
-import type { HomeDataType } from "../../models/state-types/HomeDataType";
 import { useEffect, useRef, useState } from "react";
-import type { PortfolioProjectType } from "../../types/portfolio.type";
 import { connect } from "react-redux";
 import type { RootState } from "../../state-management/store";
 import { clearErrors } from "../../state-management/actions/errors";
@@ -10,6 +8,8 @@ import Header from "../../components/layout/Header";
 import Popup from "../../components/general/popup/Popup";
 import PortfolioPopup from "../../components/main/home/Portfolio/PortfolioPopup";
 import AllPortfolio from "../../components/main/portfolio/AllPortfolio";
+import type HomeDataType from "../../models/state-types/HomeDataType";
+import type PortfolioDataType from "../../models/state-types/PortfolioDataType";
 
 interface PortfolioPropsType {
   clearErrors: () => void;
@@ -22,13 +22,13 @@ const Portfolio: React.FC<PortfolioPropsType> = (props) => {
 
   const [portfolioPopupShow, setPortfolioPopupShow] = useState<boolean>(false);
   const [portfolioPopupData, setPortfolioPopupData] =
-    useState<PortfolioProjectType | null>(null);
+    useState<PortfolioDataType | null>(null);
 
   const handlePortfolioPopup = () => {
     setPortfolioPopupShow((prev) => !prev);
   };
 
-  const handlePortfolioPopupData = (data: PortfolioProjectType) => {
+  const handlePortfolioPopupData = (data: PortfolioDataType) => {
     setPortfolioPopupData(data);
   };
 

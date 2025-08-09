@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./work-experience.module.css";
 import Clip from "../../../general/Clip";
-import type { WorkExperienceDataType } from "../../../../types/workExperience.type";
+import type WorkExperienceDataType from "../../../../models/state-types/WorkExperienceDataType";
 
 interface CompanyDetailsPropType {
   activeItem: WorkExperienceDataType | null
