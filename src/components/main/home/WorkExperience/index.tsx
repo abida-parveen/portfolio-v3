@@ -4,7 +4,7 @@ import _ from "lodash";
 import CompanyName from "./CompanyName";
 import CompanyDetails from "./CompanyDetails";
 import useWindowSize from "../../../../hooks/useWindowSize";
-import type { WorkExperienceDataType } from "../../../../types/workExperience.type";
+import type WorkExperienceDataType from "../../../../models/state-types/WorkExperienceDataType";
 
 interface WorkExperiencePropType {
   experience?: WorkExperienceDataType[];

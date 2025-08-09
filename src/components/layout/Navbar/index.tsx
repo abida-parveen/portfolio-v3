@@ -28,7 +28,7 @@ import styles from "./navbar.module.css";
 import { toggleTheme } from "../../../state-management/actions/theme";
 import Dropdown from "./Dropdown";
 import { Link } from "react-router";
-import { themeMode, type ThemeModeType } from "../../../types/theme.type";
+import { themeMode, type ThemeModeType } from "../../../models/state-types/ThemeModeType";
 import type { RootState } from "../../../state-management/store";
 
 interface NavbarPropType {

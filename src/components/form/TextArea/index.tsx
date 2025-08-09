@@ -1,11 +1,12 @@
-import React, { type ChangeEvent } from "react";
+import React from "react";
 import InputError from "../InputError";
 import styles from "./text-area.module.css";
+import type { InputChangeEvent } from "../../../models/component-types/FormControlType";
 
 interface TextAreaPropType {
   type: string;
   placeholder: string;
-  handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  handleChange: (e: InputChangeEvent) => void;
   value: string;
   name: string;
   error: string | false;

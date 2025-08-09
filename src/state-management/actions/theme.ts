@@ -1,13 +1,13 @@
-import { INIT_THEME, TOGGLE_THEME } from "../types/actionTypes";
-import type { AppThunk } from "../types/actionInterfaces";
+import { INIT_THEME, TOGGLE_THEME } from "../types";
+import type { AppThunkType } from "../../models/state-types/AppThunkType";
 
-export const toggleTheme = (): AppThunk => (dispatch) => {
+export const toggleTheme = (): AppThunkType => (dispatch) => {
   dispatch({
     type: TOGGLE_THEME,
   });
 };
 
-export const initTheme = (): AppThunk => (dispatch) => {
+export const initTheme = (): AppThunkType => (dispatch) => {
   dispatch({
     type: INIT_THEME,
   });

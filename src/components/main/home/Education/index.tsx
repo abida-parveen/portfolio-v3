@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./education.module.css";
 import Clip from "../../../general/Clip";
-import type { EducationDataType } from "../../../../types/education.type";
-import type { SkillsDataType } from "../../../../types/service.type";
+import type EducationDataType from "../../../../models/state-types/EducationDataType";
+import type SkillsDataType from "../../../../models/state-types/SkillsDataType";
 
 interface EducationPropType {
   education?: EducationDataType[];

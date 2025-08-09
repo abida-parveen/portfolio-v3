@@ -10,7 +10,7 @@ import CompanyDetails from "./CompanyDetails";
 import _ from "lodash";
 import { connect } from "react-redux";
 import type { RootState } from "../../../../state-management/store";
-import { themeMode, type ThemeModeType } from "../../../../types/theme.type";
+import { themeMode, type ThemeModeType } from "../../../../models/state-types/ThemeModeType";
 import type { WorkExperienceDataType } from "../../../../types/workExperience.type";
 
 interface CompanyNamePropType {

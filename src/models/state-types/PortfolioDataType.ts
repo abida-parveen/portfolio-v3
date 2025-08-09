@@ -1,11 +1,6 @@
-export type PortfolioCarouselDataType = {
-  id: number;
-  img: string;
-  desc: string;
-  title: string;
-};
+import type { CarouselItemType } from "../component-types/CarouselItemType";
 
-export type PortfolioProjectType = {
+export default interface PortfolioDataType {
   id: number;
   title: string;
   companyBuiltWith: string;
@@ -17,8 +12,6 @@ export type PortfolioProjectType = {
   projectLogo?: string;
   image: string;
   status: string;
-  carousel: PortfolioCarouselDataType[];
+  carousel: CarouselItemType[];
   skills: string[];
 };
-
-export type swiperStepType = "prev" | "next";

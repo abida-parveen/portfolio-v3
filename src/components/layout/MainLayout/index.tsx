@@ -7,7 +7,7 @@ import {
   themeMode,
   type ThemeModeType,
   type ThemeObject,
-} from "../../../types/theme.type";
+} from "../../../models/state-types/ThemeModeType";
 import type { RootState } from "../../../state-management/store";
 
 interface MainLayoutProps {

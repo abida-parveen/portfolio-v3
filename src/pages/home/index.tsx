@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "../../components/layout/Header";
 import Contact from "../../components/main/home/Contact";
-import type { HomeDataType } from "../../types/home.type";
+import type { HomeDataType } from "../../models/state-types/HomeDataType";
 import type { PortfolioProjectType } from "../../types/portfolio.type";
 import type { RootState } from "../../state-management/store";
 import { connect } from "react-redux";

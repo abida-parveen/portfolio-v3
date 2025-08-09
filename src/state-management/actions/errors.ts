@@ -1,15 +1,14 @@
-import { CLEAR_ERRORS, GET_ERRORS } from "../types/actionTypes";
-import type { AppThunk } from "../types/actionInterfaces";
+import { CLEAR_ERRORS, GET_ERRORS } from "../types";
+import type { AppThunkType } from "../../models/state-types/AppThunkType";
+import type ValidationErrorType from "../../models/state-types/ValidationErrorType";
 
-export type ErrorPayload = any;
-
-export const clearErrors = (): AppThunk => (dispatch) => {
+export const clearErrors = (): AppThunkType => (dispatch) => {
   dispatch({
     type: CLEAR_ERRORS,
   });
 };
 export const dispatchErrors =
-  (payload: ErrorPayload): AppThunk =>
+  (payload: ValidationErrorType): AppThunkType =>
   (dispatch) => {
     dispatch({
       type: GET_ERRORS,

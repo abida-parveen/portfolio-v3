@@ -1,8 +1,8 @@
-import type { AppThunk } from "../types/actionInterfaces";
-import { GET_CLIP, TOGGLE_CLIP } from "../types/actionTypes";
+import type { AppThunkType } from "../../models/state-types/AppThunkType";
+import { GET_CLIP, TOGGLE_CLIP } from "../types";
 
 export const toggleClip =
-  (state: boolean): AppThunk =>
+  (state: boolean): AppThunkType =>
   (dispatch) => {
     dispatch({
       type: TOGGLE_CLIP,
@@ -10,7 +10,7 @@ export const toggleClip =
     });
   };
 
-export const getClip = (): AppThunk => (dispatch) => {
+export const getClip = (): AppThunkType => (dispatch) => {
   dispatch({
     type: GET_CLIP,
   });

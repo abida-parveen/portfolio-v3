@@ -3,11 +3,12 @@ import { Swiper, SwiperSlide, type SwiperRef } from "swiper/react";
 import styles from "./popup-carousel.module.css";
 import right from "/assets/icons/right.svg";
 import left from "/assets/icons/left-light.svg";
-import type { PortfolioCarouselDataType, swiperStepType } from "../../../../types/portfolio.type";
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
+import type { CarouselItemType } from "../../../../models/component-types/CarouselItemType";
+import type { swiperStepType } from "../../../../models/component-types/SwiperStepType";
 
 interface PortfolioPopupCarouselPropType {
-  carouselData?: PortfolioCarouselDataType[];
+  carouselData?: CarouselItemType[];
 }
 
 const PortfolioPopupCarousel: React.FC<PortfolioPopupCarouselPropType> = (

@@ -1,14 +1,6 @@
-import { themeMode, type ThemeModeType } from "../../types/theme.type";
-import { INIT_THEME, TOGGLE_THEME } from "../types/actionTypes";
-
-interface ToggleThemeAction {
-  type: typeof TOGGLE_THEME;
-}
-interface InitThemeAction {
-  type: typeof INIT_THEME;
-}
-
-type ThemeAction = ToggleThemeAction | InitThemeAction;
+import type BaseAction from "../../models/state-types/BaseActionType";
+import { themeMode, type ThemeModeType } from "../../models/state-types/ThemeModeType";
+import { INIT_THEME, TOGGLE_THEME } from "../types";
 
 const initialState: ThemeModeType = themeMode.dark;
 
@@ -17,7 +9,7 @@ const isValidTheme = (theme: string | null): theme is ThemeModeType =>
 
 const themeReducer = (
   state = initialState,
-  action: ThemeAction
+  action: BaseAction
 ): ThemeModeType => {
   switch (action.type) {
     case TOGGLE_THEME: {

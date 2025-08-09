@@ -3,10 +3,10 @@ import PortfolioPopupCarousel from "./PortfolioPopupCarousel";
 import styles from "./portfolio-popup.module.css";
 import { Link } from "react-router";
 import Clip from "../../../general/Clip";
-import type { PortfolioProjectType } from "../../../../types/portfolio.type";
+import type PortfolioDataType from "../../../../models/state-types/PortfolioDataType";
 
 interface PortfolioPopupPropType {
-  portfolioPopupData?: PortfolioProjectType | null
+  portfolioPopupData?: PortfolioDataType | null;
 }
 
 const PortfolioPopup: React.FC<PortfolioPopupPropType> = (props) => {

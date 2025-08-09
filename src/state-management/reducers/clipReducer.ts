@@ -1,4 +1,4 @@
-import { GET_CLIP, TOGGLE_CLIP } from "../types/actionTypes";
+import { GET_CLIP, TOGGLE_CLIP } from "../types";
 
 type ClipState = boolean
 

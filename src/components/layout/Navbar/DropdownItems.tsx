@@ -1,8 +1,8 @@
-import type { DropdownItem } from "../../../types/navbar.type";
+import type { DropdownItemType } from "../../../models/component-types/DropdownItemType";
 import styles from "./drop-down.module.css";
 
 interface DropdownPropsType {
-  data: DropdownItem;
+  data: DropdownItemType;
   onClick: () => void;
 }
 

@@ -1,8 +1,8 @@
 import homeData from "../../helper/homeData";
-import { GET_ERRORS, HOME_DATA } from "../types/actionTypes";
+import { GET_ERRORS, HOME_DATA } from "../types";
 import axios from "axios";
 import { clearErrors } from "./errors";
-import type { AppThunk } from "../types/actionInterfaces";
+import type { AppThunkType } from "../../models/state-types/AppThunkType";
 
 interface ContactFormType {
   name: string;
@@ -10,7 +10,7 @@ interface ContactFormType {
   message: string;
 }
 
-export const getHomeData = (): AppThunk => (dispatch) => {
+export const getHomeData = (): AppThunkType => (dispatch) => {
   dispatch({
     type: HOME_DATA,
     payload: homeData,
@@ -23,7 +23,7 @@ export const postContact =
     handleContactForm: (form: ContactFormType) => void,
     handleLoading: (loading: boolean) => void,
     handleStatus: (status: number) => void
-  ): AppThunk =>
+  ): AppThunkType =>
   (dispatch) => {
     dispatch(clearErrors());
     handleLoading(true);

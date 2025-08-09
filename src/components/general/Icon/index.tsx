@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import styles from "./icon.module.css";
 import type { RootState } from "../../../state-management/store";
-import { themeMode, type ThemeModeType } from "../../../types/theme.type";
+import { themeMode, type ThemeModeType } from "../../../models/state-types/ThemeModeType";
 
 interface IconPropType {
   source: {

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./contact.module.css";
 import Icon from "../../../general/Icon";
-import type { ContactDataType } from "../../../../types/contact.type";
+import type ContactDataType from "../../../../models/state-types/ContactDataType";
 
 interface ContactCardPropType {
   data: ContactDataType;

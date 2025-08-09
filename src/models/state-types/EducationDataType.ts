@@ -1,4 +1,4 @@
-export type EducationDataType = {
+export default interface EducationDataType {
   id: number;
   city: string;
   duration: string;

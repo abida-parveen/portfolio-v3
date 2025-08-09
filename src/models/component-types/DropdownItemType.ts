@@ -1,4 +1,4 @@
-export type DropdownItem = {
+export type DropdownItemType = {
   id: number;
   title: string;
   link: string;

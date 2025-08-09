@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./services.module.css";
 import Card from "./Card";
-import type { ServiceDataType } from "../../../../types/service.type";
+import type ServiceDataType from "../../../../models/state-types/ServiceDataType";
 
 interface ServicesPropType {
   services?: ServiceDataType[]

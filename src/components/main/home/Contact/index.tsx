@@ -9,8 +9,10 @@ import TextArea from "../../../form/TextArea";
 import styles from "./contact.module.css";
 import ContactCard from "./ContactCard";
 import Loader from "../../../general/Loader";
-import type { ContactDataType, errorType, FormControlType } from "../../../../types/contact.type";
 import type { RootState } from "../../../../state-management/store";
+import type FormControlType from "../../../../models/component-types/FormControlType";
+import type ContactDataType from "../../../../models/state-types/ContactDataType";
+import type ValidationErrorType from "../../../../models/state-types/ValidationErrorType";
 
 export interface ContactPropsType {
   postContact: (
@@ -19,7 +21,7 @@ export interface ContactPropsType {
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
     setStatus: React.Dispatch<React.SetStateAction<number | undefined>>
   ) => void;
-  errors?: errorType;
+  errors?: ValidationErrorType | null;
   contact?: ContactDataType[];
 }
 
@@ -134,6 +136,6 @@ const Contact: React.FC<ContactPropsType> = (props) => {
 };
 
 const mapStateToProps = (state: RootState) => ({
-  errors: state.errors,
+  errors: state.errors ?? undefined,
 });
 export default connect(mapStateToProps, { postContact })(Contact);

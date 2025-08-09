@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./card.module.css";
 import Icon from "../../../general/Icon";
-import type { ServiceDataType } from "../../../../types/service.type";
+import type ServiceDataType from "../../../../models/state-types/ServiceDataType";
 
 interface CardPropType {
   data: ServiceDataType;

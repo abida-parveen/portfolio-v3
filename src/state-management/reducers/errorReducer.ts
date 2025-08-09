@@ -1,13 +1,14 @@
-import { CLEAR_ERRORS, GET_ERRORS } from "../types/actionTypes";
-import type { ErrorAction, ValidationErrors } from "../types/error.type";
+import type ValidationErrorType from "../../models/state-types/ValidationErrorType";
+import { CLEAR_ERRORS, GET_ERRORS } from "../types";
+import type { ErrorActionType } from "../../models/state-types/ErrorActionType";
 
-type ErrorState = ValidationErrors | null;
+type ErrorState = ValidationErrorType | null;
 
 const initialState: ErrorState = null;
 
 const errorReducer = (
   state = initialState,
-  action: ErrorAction
+  action: ErrorActionType
 ): ErrorState => {
   switch (action.type) {
     case GET_ERRORS: {

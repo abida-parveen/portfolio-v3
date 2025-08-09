@@ -13,18 +13,16 @@ import arrow from "/assets/icons/arrow.svg";
 import darkArrow from "/assets/icons/arrow-dark.svg";
 import { connect } from "react-redux";
 import { Link } from "react-router";
-import type {
-  PortfolioProjectType,
-  swiperStepType,
-} from "../../../../types/portfolio.type";
-import type { ThemeModeType } from "../../../../types/theme.type";
+import type { ThemeModeType } from "../../../../models/state-types/ThemeModeType";
 import type { RootState } from "../../../../state-management/store";
+import type PortfolioDataType from "../../../../models/state-types/PortfolioDataType";
+import type { swiperStepType } from "../../../../models/component-types/SwiperStepType";
 
 interface PortfolioPropType {
   handlePortfolioPopup: () => void;
-  handlePortfolioPopupData: (item: PortfolioProjectType) => void;
+  handlePortfolioPopupData: (item: PortfolioDataType) => void;
   themeMode?: ThemeModeType;
-  portfolio: PortfolioProjectType[] | undefined;
+  portfolio: PortfolioDataType[] | undefined;
 }
 
 const Portfolio: React.FC<PortfolioPropType> = (props) => {
@@ -45,7 +43,7 @@ const Portfolio: React.FC<PortfolioPropType> = (props) => {
       : swiperRef.current?.swiper.slideNext();
   };
 
-  const handlePopup = (item: PortfolioProjectType) => {
+  const handlePopup = (item: PortfolioDataType) => {
     handlePortfolioPopupData(item);
     handlePortfolioPopup();
   };

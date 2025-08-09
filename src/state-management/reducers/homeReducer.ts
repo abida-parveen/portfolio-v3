@@ -1,10 +1,6 @@
-import type { HomeDataType } from "../../types/home.type";
-import { HOME_DATA } from "../types/actionTypes";
-
-interface HomeDataAction {
-  type: typeof HOME_DATA;
-  payload: HomeDataType;
-}
+import type BaseActionType from "../../models/state-types/BaseActionType";
+import type HomeDataType from "../../models/state-types/HomeDataType";
+import { HOME_DATA } from "../types";
 
 const initialState: HomeDataType = {
   serviceData: [],
@@ -18,7 +14,7 @@ const initialState: HomeDataType = {
 
 const homeReducer = (
   state = initialState,
-  action: HomeDataAction
+  action: BaseActionType<HomeDataType>
 ): HomeDataType => {
   switch (action.type) {
     case HOME_DATA:

@@ -1,5 +1,5 @@
 import type React from "react";
-import type { HomeDataType } from "../../types/home.type";
+import type { HomeDataType } from "../../models/state-types/HomeDataType";
 import { useEffect, useRef, useState } from "react";
 import type { PortfolioProjectType } from "../../types/portfolio.type";
 import { connect } from "react-redux";

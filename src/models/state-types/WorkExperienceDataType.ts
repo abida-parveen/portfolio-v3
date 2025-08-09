@@ -3,7 +3,7 @@ type WhatIDidItem = {
   desc: string;
 };
 
-export type WorkExperienceDataType = {
+export default interface WorkExperienceDataType {
   id: number;
   duration: string;
   designation: string;

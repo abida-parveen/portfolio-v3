@@ -1,4 +1,4 @@
-export type TestimonialsDataType = {
+export default interface TestimonialsDataType {
   id: number;
   profile: string;
   name: string;

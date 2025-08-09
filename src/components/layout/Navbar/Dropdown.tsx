@@ -1,10 +1,10 @@
 import type React from "react";
-import type { DropdownItem } from "../../../types/navbar.type";
+import type { DropdownItemType } from "../../../models/component-types/DropdownItemType";
 import styles from "./drop-down.module.css";
 import DropdownItems from "./DropdownItems";
 
 interface DropdownPropsType {
-  items: DropdownItem[];
+  items: DropdownItemType[];
   onClick: () => void;
   onMouseLeave?: () => void;
 }
