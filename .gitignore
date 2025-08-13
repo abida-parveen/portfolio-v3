@@ -26,3 +26,5 @@ src/helper
 *.njsproj
 *.sln
 *.sw?
+
+.vercel

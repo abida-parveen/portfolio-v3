@@ -1,4 +1,4 @@
-import type BaseAction from "../../models/state-types/BaseActionType";
+import type BaseActionType from "../../models/state-types/BaseActionType";
 import { themeMode, type ThemeModeType } from "../../models/state-types/ThemeModeType";
 import { INIT_THEME, TOGGLE_THEME } from "../types";
 
@@ -9,7 +9,7 @@ const isValidTheme = (theme: string | null): theme is ThemeModeType =>
 
 const themeReducer = (
   state = initialState,
-  action: BaseAction
+  action: BaseActionType
 ): ThemeModeType => {
   switch (action.type) {
     case TOGGLE_THEME: {
